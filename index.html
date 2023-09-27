@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" alt="" class="logo">
+                <Ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </Ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>HI, I'm <span>Awais Ahmad</span><br> Awan from Pakistan </h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------About Section------------------------ -->
+    <div id="about">
+        <div class="about-container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/awais.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iusto quisquam, repellendus
+                        suscipit repudiandae maiores tempora omnis ratione, a ut nemo ipsa explicabo temporibus nostrum
+                        itaque placeat dolorem at delectus voluptatibus esse nesciunt excepturi error! Omnis autem
+                        debitis, aut at qui temporibus eos laboriosam quidem amet quaerat quam, unde consequatur neque
+                        ea totam. Aliquam enim facere placeat tempore doloremque architecto id quidem. Laboriosam eius,
+                        quo necessitatibus dolorem at dicta vel, ex exercitationem, magni magnam recusandae aperiam hic.
+                        Culpa voluptate minus excepturi pariatur, maxime optio temporibus maiores dolorum commodi quod
+                        voluptatum accusamus. Reiciendis culpa aliquam ex, unde earum natus fugiat dolores adipisci!
+                        Nemo, ipsa labore! Ad mollitia voluptatum velit, nihil voluptas impedit officia sunt non aliquid
+                        quaerat aspernatur.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web/App Development</li>
+                            <li><span>App Development</span><br>Building Android Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-Current</span><br>Design Training at Game Train</li>
+                            <li><span>2019-2021</span><br>Team lead at Game Train</li>
+                            <li><span>2015-2019</span><br>Work as Junior developer at Generation</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>MSC(CS) from Punjab University</li>
+                            <li><span>2016</span><br>BCS From GC college</li>
+                            <li><span>2014</span><br>DAE from Lahore Techninal College</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
+</body>
+
+</html>
